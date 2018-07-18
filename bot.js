@@ -6,26 +6,13 @@ client.on('ready', () => {
 });
 
 
-client.on('message', async message => {
-    // Our bot needs to know if it will execute a command
-    // It will listen for messages that will start with `!`
- if (message.substring(0, 1) == '!') {
-        var args = message.substring(1).split(' ');
-        var cmd = args[0];
-       
-        args = args.splice(1);
-        switch(cmd) {
-            // !ping
-        	case 'ping':
-                    	message: 'Pong!'
-            		break;
-			
-		case 'Hello':
-			message: 'Hello, Master'
-			break;
-            // Just add any case commands if you want to..
-         }
-     }
-
+client.on("message", async message => {
+	if(message.author.bot) return;
+	const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+	const command = args.shift().toLowerCase();
+	 if(command === "ping") {
+	 	message.channel.send('pong!');
+	 }
+}
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
