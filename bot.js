@@ -5,17 +5,29 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-client.on('message', message => {
-    if (message.content === 'ping') {
-    	message.channel.send('PONG!');
-  	}
-});
-
-client.on('message', message => {
-    if (message.content === 'bing') {
-    	message.reply('BONG!');
-  	}
-});
+ if (message.substring(0, 1) == '!') {
+        var args = message.substring(1).split(' ');
+        var cmd = args[0];
+       
+        args = args.splice(1);
+        switch(cmd) {
+            // !ping
+            case 'ping':
+                bot.sendMessage({
+                    to: channelID,
+                    message: 'Pong!'
+                });
+            break;
+			
+			case 'Hello':
+				bot.sendMessage({
+					to: channelID,
+					message: 'Hello, Master'
+				});
+			break;
+            // Just add any case commands if you want to..
+         }
+     }
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
