@@ -7,25 +7,16 @@ client.on('ready', () => {
 
 
 client.on('message', message => {
-    // Our bot needs to know if it will execute a command
-    // It will listen for messages that will start with `!`
- if (message.substring(0, 1) == '!') {
-        var args = message.substring(1).split(' ');
-        var cmd = args[0];
-       
-        args = args.splice(1);
-        switch(cmd) {
-            // !ping
-        	case 'ping':
-                    	message: 'Pong!'
-            		break;
-			
-		case 'Hello':
-			message: 'Hello, Master'
-			break;
-            // Just add any case commands if you want to..
-         }
-     }
+    if (message.content === 'ping') {
+    	message.channel.send('PONG!');
+  	}
+});
+
+client.on('message', message => {
+    if (message.content === 'bing') {
+    	message.reply('BONG!');
+  	}
+});
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
