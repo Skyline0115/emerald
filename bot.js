@@ -6,7 +6,7 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    String ID = message.author.id.toString();
+    var ID = message.author.id;
     switch(message.content.toLowerCase()){
         case '!hello':
             /*if(message.author.id === '3517'){
