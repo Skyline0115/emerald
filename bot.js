@@ -9,7 +9,7 @@ client.on('message', message => {
     
     switch(message.content.toLowerCase()){
         case '!hello':
-            message.channel.send(client.role);
+            message.channel.send('LEEEEROY JENKINS');
             break;
         case '!dildo':
             message.channel.send('SHROOMS!');
