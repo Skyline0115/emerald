@@ -7,10 +7,12 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.substring(0, 1) == '!') {
-        message.channel.send('ITWORKS');
         if (message.content === '!ping') {
     	    message.channel.send('PONG!');
   	    }
+        else {
+            message.channel.send('shrooms');
+        }
     }
 });
 
