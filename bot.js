@@ -12,7 +12,7 @@ client.on('message', message => {
             /*if(message.author.id === '3517'){
                 message.channel.send('Hello Master');
             }*/
-                message.channel.send(message.author.id);
+                message.channel.send(5+6);
           
             break;
         case '!dildo':
