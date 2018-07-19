@@ -6,9 +6,9 @@ client.on('ready', () => {
 });
 
 
-/*client.on("message", message => {
+client.on("message", message => {
 	 	message.channel.send('pong!');
-	 }
-}*/
+	 )};
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
