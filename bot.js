@@ -11,7 +11,7 @@ client.on('message', message => {
     	    message.channel.send('PONG!');
   	    }
         else {
-            message.channel.send('shrooms');
+           
         }
     
 });
