@@ -6,13 +6,14 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    
+    String ID = message.author.id.toString();
     switch(message.content.toLowerCase()){
         case '!hello':
             /*if(message.author.id === '3517'){
                 message.channel.send('Hello Master');
-            }*/
-                message.channel.send(5+6);
+            }*/ 
+                
+                message.channel.send(ID);
           
             break;
         case '!dildo':
