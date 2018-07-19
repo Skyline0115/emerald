@@ -6,13 +6,20 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-   
-        if (message.content === '!ping') {
+    switch(message.content){
+        case '!ping':
+            message.channel.send('PONG!');
+            break;
+        case '!dildo':
+            message.channel.send('SHROOMS!');
+            break;
+    }       
+        /*if (message.content === '!ping') {
     	    message.channel.send('PONG!');
   	    }
         else {
            
-        }
+        }*/
     
 });
 
