@@ -9,8 +9,8 @@ client.on('message', message => {
     var ID = message.author.id;
     switch(message.content.toLowerCase()){
         case '!hello':
-            if(message.author.id === 142027014029705217){
-                message.channel.send('Hello Mistress');
+            if(ID === '469190204289318923'){
+                message.channel.send('blegh');
             }
             else{
                 message.channel.send('Hello Master');
