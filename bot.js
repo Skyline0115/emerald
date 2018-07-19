@@ -9,7 +9,7 @@ client.on('message', message => {
     var ID = message.author.id;
     switch(message.content.toLowerCase()){
         case '!hello':
-            if(ID === '469190204289318923'){
+            if(ID === '142027014029705217'){
                 message.channel.send('blegh');
             }
             else{
