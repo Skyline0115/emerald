@@ -10,7 +10,7 @@ client.on('message', message => {
     switch(message.content.toLowerCase()){
         case '!hello':
             if(ID === '142027014029705217'){
-                message.channel.send('blegh');
+                message.channel.send('Hello Mistress');
             }
             else{
                 message.channel.send('Hello Master');
