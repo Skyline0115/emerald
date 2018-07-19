@@ -9,12 +9,12 @@ client.on('message', message => {
     var ID = message.author.id;
     switch(message.content.toLowerCase()){
         case '!hello':
-            /*if(message.author.id === '3517'){
+            if(message.author.id === 142027014029705217){
+                message.channel.send('Hello Mistress');
+            }
+            else{
                 message.channel.send('Hello Master');
-            }*/ 
-                
-                message.channel.send(ID);
-          
+            }
             break;
         case '!dildo':
             message.channel.send('SHROOMS!');
