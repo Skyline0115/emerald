@@ -6,9 +6,11 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content === 'ping') {
-    	message.channel.send('PONG!');
-  	}
+    if (message.substring(0, 1) == '!') {
+        if (message.content === 'ping') {
+    	    message.channel.send('PONG!');
+  	    }
+    }
 });
 
 // THIS  MUST  BE  THIS  WAY
