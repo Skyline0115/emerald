@@ -9,7 +9,7 @@ client.on('message', message => {
     
     switch(message.content.toLowerCase()){
         case '!hello':
-            if(message.author.id === '#3517'){
+            if(message.author.id === '3517'){
                 message.channel.send('Hello Master');
             }
             else {
